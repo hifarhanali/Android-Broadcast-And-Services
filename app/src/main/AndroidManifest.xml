@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.abcbook">
+
+    <!-- phone call permissions -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- bluetooth permissions -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/abcbook_ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/abcbook_ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ABCBook">
+
+
+
+        <receiver
+            android:name=".receivers.IncomingCallBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".receivers.BluetoothBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".services.MusicService" />
+
+        <activity
+            android:name=".letteractivity.ZLetterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".letteractivity.YLetterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".letteractivity.XLetterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".letteractivity.WLetterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".letteractivity.VLetterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".letteractivity.ULetterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".letteractivity.TLetterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".letteractivity.SLetterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".letteractivity.RLetterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".letteractivity.QLetterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".letteractivity.PLetterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".letteractivity.OLetterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".letteractivity.NLetterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".letteractivity.MLetterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".letteractivity.LLetterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".letteractivity.KLetterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".letteractivity.JLetterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".letteractivity.ILetterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".letteractivity.HLetterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".letteractivity.GLetterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".letteractivity.FLetterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".letteractivity.ELetterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".letteractivity.DLetterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".letteractivity.CLetterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".letteractivity.BLetterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".letteractivity.ALetterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
